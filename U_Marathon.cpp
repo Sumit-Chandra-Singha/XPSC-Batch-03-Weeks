@@ -12,19 +12,17 @@ typedef pair<int,int> pii;
 
 int solveFunction()
 {
-    ll n;
-    cin >> n;
-    set<ll> s;
-    loop(i,0,n) {
-        ll x;
-        cin >> x;
-        s.insert(x);
-    }
-    
-    if((n%2 && s.size()%2) || (n%2==0 && s.size()%2==0))
-        cout << s.size() << "\n";
-    else
-        cout << s.size()-1 << endl;
+    ll t,a,b,c;
+    cin >> t >> a >> b >> c;
+    int cnt = 0;
+    if(a>t)
+        cnt++;
+    if(b>t)
+        cnt++;
+    if(c>t)
+        cnt++;
+
+    cout<<cnt<<"\n";
     return 0;
 }
 

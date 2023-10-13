@@ -14,26 +14,25 @@ int solveFunction()
 {
     ll n;
     cin >> n;
-    set<ll> s;
-    loop(i,0,n) {
-        ll x;
-        cin >> x;
-        s.insert(x);
+    ll sum = 0;
+    loop(i,1,n+1){
+        loop(j,1,n+1){
+            loop(k,1,n+1){
+                sum += __gcd(__gcd(i, j), k);
+            }
+        }
     }
-    
-    if((n%2 && s.size()%2) || (n%2==0 && s.size()%2==0))
-        cout << s.size() << "\n";
-    else
-        cout << s.size()-1 << endl;
+
+    cout<<sum<<"\n";
     return 0;
 }
 
 int main()
 {
     fio;
-    int t;
-    cin>>t;
-    while(t--)
+    // int t;
+    // cin>>t;
+    // while(t--)
         solveFunction();
 
     return 0;
