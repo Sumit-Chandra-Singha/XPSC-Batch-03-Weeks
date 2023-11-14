@@ -16,17 +16,15 @@ int solveFunction()
 {
     ll n;
     cin >> n;
-    set<ll, greater<ll>> st;
-    loop(i, 0, n) {
-        ll x;
-        cin >> x;
-        st.insert(x);
-    }
-    vector<ll> v;
-    for(auto i: st){
-        v.push_back(i);
-    }
-    cout << v[0]+v[1] << "\n";
+
+    if(!(n%2==0 && n%7==0) && !(n%2==1 && n%9==0))
+        cout << "Charlie";
+    else if(n%2==0 && n%7==0)
+        cout << "Alice";
+    else
+        cout << "Bob";
+
+    cout<<"\n";
     return 0;
 }
 

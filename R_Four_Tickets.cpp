@@ -16,17 +16,13 @@ int solveFunction()
 {
     ll n;
     cin >> n;
-    set<ll, greater<ll>> st;
-    loop(i, 0, n) {
-        ll x;
-        cin >> x;
-        st.insert(x);
-    }
-    vector<ll> v;
-    for(auto i: st){
-        v.push_back(i);
-    }
-    cout << v[0]+v[1] << "\n";
+
+    if(n*4<=1000)
+        cout << "YES";
+    else
+        cout << "NO";
+    
+    cout << "\n";
     return 0;
 }
 
